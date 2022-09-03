@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home - Snow White Cleaning Services</title>
+  </head>
+  <body>
+    <!-- start sticky -->
+    <div class="sticky top-0 z-50 bg-white">
+      <div
+        class="mx-auto max-w-[1240px] flex flex-col md:flex-row md:justify-between md:items-center"
+      >
+        <header class="p-6 flex justify-between items-center">
+          <img
+            class="w-20 h-20"
+            alt="snow white cleaning services logo"
+            src="img/logo-snowwhite.jpg"
+          />
+          <span class="p-4"> Snow White Cleaning Services </span>
+          <div
+            class="md:hidden p-2 rounded-sm cursor-pointer bg-green-400"
+            id="burger"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="white"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
+        </header>
+        <nav class="hidden md:block" id="menu">
+          <ul class="md:flex font-montserrat">
+            <li class="px-4 py-3 border-y-2 md:border-0 text-[#11336d]">
+              <a href="#">Home</a>
+            </li>
+            <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
+              <a href="#">Services</a>
+            </li>
+            <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
+              <a href="#">Location</a>
+            </li>
+            <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <header
+      style="background-image: url('img/header-bg.jpg')"
+      class="bg-gray-300 bg-fixed bg-blend-multiply w-full h-full bg-cover bg-center"
+    >
+      <div class="container mx-auto">
+        <div class="pt-10">
+          <img
+            class="rounded-full mx-auto"
+            src="img/logo-snowwhite.jpg"
+            alt=""
+          />
+        </div>
+        <div class="mt-5 pt-5 pb-5 mx-auto bg-opacity-50 bg-green-400">
+          <h1 class="text-5xl font-bold text-center text-gray-200">
+            Snow White Cleaning Services
+          </h1>
+        </div>
+        <h2 class="pt-8 text-center font-bold text-3xl text-gray-200">
+          Cleaner Than Snow - call to action
+        </h2>
+        <div class="pb-8 pt-4">
+          <div class="mx-auto w-32 h-0.5 bg-red-500"></div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container mx-auto my-12">
+        <!-- section title -->
+        <h2 class="text-3xl font-semibold text-center">
+          Exceptional Laundry Service
+        </h2>
+
+        <!-- items wrapper -->
+        <div
+          class="mt-12 md:flex md:flex-row text-center justify-around flex-col"
+        >
+          <!-- item 1 -->
+          <div>
+            <img
+              class="mx-auto mt-10"
+              src="img/section3-sterilization.png"
+              alt=""
+            />
+            <h3 class="text-xl mt-4">Sterilization</h3>
+          </div>
+          <!-- item 2 -->
+          <div>
+            <img
+              class="mx-auto mt-10"
+              src="img/section3-dry-cleaning.png"
+              alt=""
+            />
+            <h3 class="text-xl mt-4">Dry Cleaning</h3>
+          </div>
+          <!-- item 3 -->
+
+          <div>
+            <img class="mx-auto mt-10" src="img/section3-ironing.png" alt="" />
+            <h3 class="text-xl mt-4">Ironing</h3>
+          </div>
+          <!-- item 4 -->
+          <div>
+            <img class="mx-auto mt-10" src="img/section3-delivery.png" alt="" />
+            <h3 class="text-xl mt-4">Fast Free Delivery</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="h-40 bg-gray-100">
+      <div class="container mx-auto text-center pt-12">
+        <p>
+          “The purpose of art is washing the dust of daily life off our souls.”
+        </p>
+        <p class="mt-2">- Pablo Picasso</p>
+      </div>
+    </section>
+
+    <section
+      style="background-image: url('img/section2-bg.jpg')"
+      class="bg-gray-500 bg-fixed bg-blend-multiply w-full bg-cover bg-center py-12"
+    >
+      <div class="container mx-auto">
+        <!-- flex wrapper -->
+        <div class="mt-12 flex justify-around flex-col md:flex-row">
+          <div>
+            <img src="img/section2-img.jpg" alt="" class="inline-block" />
+          </div>
+
+          <div class="text-center md:text-left">
+            <div>
+              <h2 class="text-3xl text-gray-200">Leave it to us</h2>
+              <div class="mt-2 w-32 h-0.5 bg-red-500"></div>
+            </div>
+            <div class="text-gray-200 text-lg mt-12">
+              <p>
+                We offer a wide range of laundry cleaning services.<br /><br />
+                Whether it is clothes, blankets, or anything made of fabric.<br /><br />
+                We got you covered:
+              </p>
+              <ul class="list-disc list-inside mt-2">
+                <li>Cleaning</li>
+                <li>Sterilization</li>
+                <li>Ironing</li>
+                <li>Packing</li>
+                <li>Delivering</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-200">
+      <div class="mt-6">
+        <div>
+          Address 1 Tripoli, 200 street, next to Audi Bank 06434671 03294633
+        </div>
+
+        <div>Address 2 Tripoli, Maarad 06433520</div>
+      </div>
+    </footer>
+
+    <script>
+      const burger = document.querySelector('#burger');
+      const menu = document.querySelector('#menu');
+
+      burger.addEventListener('click', () => {
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      });
+
+      menu.addEventListener('click', () => {
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      });
+    </script>
+  </body>
+</html>
