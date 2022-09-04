@@ -219,14 +219,14 @@
       });
 
       // map
-      var map = L.map('map').setView([34.436744, 35.830439], 15);
+      var map = L.map('map').setView([34.436338, 35.831781], 15);
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: 'By OpenStreetMap',
       }).addTo(map);
 
-      var marker = L.marker([34.436744, 35.830439]).addTo(map);
+      var marker = L.marker([34.436338, 35.831781]).addTo(map);
 
       marker.bindPopup("<b>Snow White Cleaning Services!</b><br>06433520").openPopup();
 
