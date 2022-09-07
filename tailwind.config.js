@@ -10,8 +10,8 @@ module.exports = {
         //  Space Grotesk?? for hero h1?
       },
       colors: {
-        primary: '#00016C',
-        secondary: '#FFBF00',
+        primary: '#3CBBBC',
+        secondary: '#BC3D3C',
         text: '#7A7A7A'
       }
     },
