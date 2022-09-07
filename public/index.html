@@ -21,7 +21,7 @@
 
     <title>Home - Snow White Cleaning Services</title>
   </head>
-  <body>
+  <body id="body">
     <!-- start sticky -->
     <div class="sticky top-0 z-50 bg-white">
       <div
@@ -57,7 +57,7 @@
         <nav class="hidden md:block" id="menu">
           <ul class="md:flex font-montserrat">
             <li class="px-4 py-3 border-y-2 md:border-0 text-[#11336d]">
-              <a id="menu-header" style="cursor: pointer">Home</a>
+              <a id="menu-top" style="cursor: pointer">Home</a>
             </li>
             <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
               <a id="menu-services" style="cursor: pointer">Services</a>
@@ -291,10 +291,10 @@
       };
 
       document
-        .getElementById('menu-header')
+        .getElementById('menu-top')
         .addEventListener(
           'click',
-          () => smoothScroll(document.querySelector('#header')),
+          () => smoothScroll(document.querySelector('#body')),
           false
         );
 

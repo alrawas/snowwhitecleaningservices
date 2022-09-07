@@ -608,6 +608,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -646,10 +650,6 @@ video {
 
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .inline-block {
