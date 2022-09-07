@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
     <link rel="stylesheet" href="styles.css" />
 
     <link
@@ -67,7 +73,10 @@
       </div>
     </div>
     <header
-      style="background-image: url('img/header-bg.jpg')"
+      style="
+        background-image: url('img/header-bg.jpg');
+        clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
+      "
       class="bg-gray-300 bg-fixed bg-blend-multiply w-full h-full bg-cover bg-center"
     >
       <div class="container mx-auto">
@@ -147,11 +156,11 @@
 
     <section
       style="background-image: url('img/section2-bg.jpg')"
-      class="bg-gray-500 bg-fixed bg-blend-multiply w-full bg-cover bg-center py-12"
+      class="bg-gray-500 bg-fixed bg-blend-multiply w-full bg-cover bg-center md:py-12"
     >
       <div class="container mx-auto">
         <!-- flex wrapper -->
-        <div class="mt-12 flex justify-around flex-col md:flex-row">
+        <div class="flex justify-between flex-col md:flex-row">
           <div>
             <img src="img/section2-img.jpg" alt="" class="inline-block" />
           </div>
@@ -180,17 +189,30 @@
       </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-200">
-      <div id="map"></div>
-
-      <div class="mt-6">
-        <div>
-          Address 1 Tripoli, 200 street, next to Audi Bank 06434671 03294633
+    <footer class="bg-gray-900 text-gray-200 py-6">
+      <div class="container mx-auto flex flex-col-reverse md:flex-row justify-between">
+        <div class="h-80 md:w-96 w-full">
+          <div id="map"></div>
         </div>
 
-        <div>Address 2 Tripoli, Maarad 06433520</div>
+        <div class="mt-6 text-lg">
+          <div class="mb-4 px-4">
+            <h3 class="mb-2 text-2xl">Address 1</h3>
+            <p class="mb-1">Tripoli, 200 street, next to Audi Bank</p>
+            <i class="fa fa-phone"></i> 06434671 <br>
+            <i class="fa fa-whatsapp"></i> 03294633
+          </div>
+          <div class="mb-4 px-4">
+            <h3 class="mb-2 text-2xl">Address 2</h3>
+            <p class="mb-1">Tripoli, Maarad, near Maarad Pharmacy </p>
+            <i class="fa fa-phone"></i> 06433520 <br>
+
+          </div>
+        </div>
+      </div>
       </div>
     </footer>
+    <div class="bg-black h-20"></div>
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
@@ -228,8 +250,10 @@
 
       var marker = L.marker([34.436338, 35.831781]).addTo(map);
 
-      marker.bindPopup("<b>Snow White Cleaning Services!</b><br>06433520").openPopup();
+      marker.bindPopup('<b>Snow White Cleaning Services!</b><br>06433520');
+      // .openPopup();
 
+      // TODO: add two links below, each makes the map move to the relevant popinter and address for the two adresses
     </script>
   </body>
 </html>

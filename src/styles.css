@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-#map { height: 240px; }
+#map { height: 100%; }
