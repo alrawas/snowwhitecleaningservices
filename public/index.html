@@ -33,7 +33,7 @@
             alt="snow white cleaning services logo"
             src="img/logo-snowwhite.jpg"
           />
-          <span class="p-4"> Snow White Cleaning Services </span>
+          <span class="p-4">Snow White Cleaning Services</span>
           <div
             class="md:hidden p-2 rounded-sm cursor-pointer bg-primary"
             id="burger"
@@ -57,22 +57,25 @@
         <nav class="hidden md:block" id="menu">
           <ul class="md:flex font-montserrat">
             <li class="px-4 py-3 border-y-2 md:border-0 text-[#11336d]">
-              <a href="#">Home</a>
+              <a id="menu-header" style="cursor: pointer">Home</a>
             </li>
             <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
-              <a href="#">Services</a>
+              <a id="menu-services" style="cursor: pointer">Services</a>
             </li>
             <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
-              <a href="#">Location</a>
+              <a id="menu-location" style="cursor: pointer">Location</a>
             </li>
             <li class="px-4 py-3 border-b-2 md:border-0 text-[#11336d]">
-              <a href="#">Contact</a>
+              <a href="tel:+9616433520"
+                ><i class="fa fa-phone mr-2"></i>Call Now</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </div>
     <header
+      id="header"
       style="
         background-image: url('img/header-bg.jpg');
         clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);
@@ -101,15 +104,14 @@
       </div>
     </header>
 
-    <section>
+    <section id="services">
       <div class="container mx-auto my-12">
         <!-- section title -->
-        
-          <h2 class="text-3xl font-semibold text-center">
-            Exceptional Laundry Service
-          </h2>
-          <div class="mx-auto mt-4 w-32 h-0.5 bg-secondary"></div>
-        
+
+        <h2 class="text-3xl font-semibold text-center">
+          Exceptional Laundry Service
+        </h2>
+        <div class="mx-auto mt-4 w-32 h-0.5 bg-secondary"></div>
 
         <!-- items wrapper -->
         <div
@@ -175,14 +177,14 @@
             </div>
             <div class="text-gray-200 mt-12 text-left pl-4">
               <p>We offer you a wide range of laundry cleaning services</p>
-                <ul class="list-disc list-inside mt-2">
-                  <li>Clothes</li>
-                  <li>Blankets</li>
-                  <li>Anything made of fabric</li>
-                </ul>
-              
-              <p class="mt-6"> We got you covered</p> 
-              
+              <ul class="list-disc list-inside mt-2">
+                <li>Clothes</li>
+                <li>Blankets</li>
+                <li>Anything made of fabric</li>
+              </ul>
+
+              <p class="mt-6">We got you covered</p>
+
               <ul class="list-disc list-inside mt-2 mb-6">
                 <li>Cleaning</li>
                 <li>Sterilization</li>
@@ -196,8 +198,10 @@
       </div>
     </section>
 
-    <footer class="bg-primary text-gray-800 md:py-6">
-      <div class="container mx-auto flex flex-col-reverse md:flex-row justify-between">
+    <footer id="location" class="bg-primary text-gray-800 md:py-6">
+      <div
+        class="container mx-auto flex flex-col-reverse md:flex-row justify-between"
+      >
         <div class="h-80 md:w-96 w-full">
           <div id="map"></div>
         </div>
@@ -214,16 +218,21 @@
           </div> -->
           <div class="mb-4 px-4">
             <h3 class="mb-2 text-2xl text-black">Address</h3>
-            <p class="mb-1">Tripoli, Maarad, Near Al Maarad Pharmacy </p>
-            <a href="tel:+9616433520"><i class="fa fa-phone mr-2"></i>06433520</a><br>
-
+            <p class="mb-1">Tripoli, Maarad, Near Al Maarad Pharmacy</p>
+            <a href="tel:+9616433520"
+              ><i class="fa fa-phone mr-2"></i>06433520</a
+            >
           </div>
         </div>
       </div>
-      </div>
     </footer>
     <div class="bg-white h-24 container mx-auto text-center py-8">
-      <p>Made with <i class="fa fa-heart"></i> by <a href="https://abdulrahmanelrawas.worksarabia.com">AbulRahman ElRawas</a></p>
+      <p>
+        Made with <i class="fa fa-heart"></i> by
+        <a href="https://abdulrahmanelrawas.worksarabia.com"
+          >AbulRahman ElRawas</a
+        >
+      </p>
     </div>
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -266,6 +275,44 @@
       // .openPopup();
 
       // TODO: add two links below, each makes the map move to the relevant popinter and address for the two adresses
+
+      const scrollIntoView = (target) => {
+        const el = document.querySelector(target.getAttribute('href'));
+        if (!el) return;
+        el.scrollIntoView({
+          behavior: 'smooth',
+        });
+      };
+
+      const smoothScroll = (el) => {
+        el.scrollIntoView({
+          behavior: 'smooth',
+        });
+      };
+
+      document
+        .getElementById('menu-header')
+        .addEventListener(
+          'click',
+          () => smoothScroll(document.querySelector('#header')),
+          false
+        );
+
+      document
+        .getElementById('menu-services')
+        .addEventListener(
+          'click',
+          () => smoothScroll(document.querySelector('#services')),
+          false
+        );
+
+      document
+        .getElementById('menu-location')
+        .addEventListener(
+          'click',
+          () => smoothScroll(document.querySelector('#location')),
+          false
+        );
     </script>
   </body>
 </html>
