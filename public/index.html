@@ -151,10 +151,10 @@
     </section>
 
     <section class="h-34 text-gray-200 text-3xl bg-secondary">
-      <div class="container mx-auto text-center flex content-center justify-center py-12">
-        <p>
-          ~ Washing the dust of daily life off our souls ~
-        </p>
+      <div
+        class="container mx-auto text-center flex content-center justify-center py-12"
+      >
+        <p>~ Washing the dust of daily life off our souls ~</p>
       </div>
     </section>
 
@@ -202,7 +202,7 @@
         class="container mx-auto flex flex-col-reverse md:flex-row justify-between"
       >
         <div class="h-80 md:w-96 w-full">
-          <div id="map"></div>
+          <div id="map" class="z-0"></div>
         </div>
 
         <!-- <div class="mt-6 text-lg">
@@ -219,8 +219,11 @@
             <h3 class="mb-2 text-2xl text-black">Address</h3>
             <p class="mb-1">Tripoli, Maarad, Near Al Maarad Pharmacy</p>
             <a href="tel:+9616433520"
-              ><i class="fa fa-phone mr-2"></i>06433520</a
-            >
+              ><i class="fa fa-phone mr-2"></i>06 433 520</a
+            ><br>
+            <a href="https://wa.me/+9613176160"
+            ><i class="fa fa-whatsapp fa-xl mr-2" aria-hidden="true"></i
+          >03 176 160</a>
           </div>
         </div>
       </div>
@@ -232,6 +235,18 @@
           >AbulRahman ElRawas</a
         >
       </p>
+    </div>
+
+    <div class="z-10 block opacity-80 md:hidden">
+      <div class="fixed right-4 bottom-4">
+        <div
+          class="p-6 bg-green-400 ring-1 hover:ring-4 ring-white rounded-full"
+        >
+          <a href="https://wa.me/+9613176160"
+            ><i class="fa fa-whatsapp text-3xl" aria-hidden="true"> </i
+          ></a>
+        </div>
+      </div>
     </div>
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
@@ -270,7 +285,9 @@
 
       var marker = L.marker([34.436338, 35.831781]).addTo(map);
 
-      marker.bindPopup('<i class="fa fa-home"></i><b> Snow White Cleaning Services</b>');
+      marker.bindPopup(
+        '<i class="fa fa-home"></i><b> Snow White Cleaning Services</b>'
+      );
       // .openPopup();
 
       // TODO: add two links below, each makes the map move to the relevant popinter and address for the two adresses
