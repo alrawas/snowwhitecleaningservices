@@ -118,7 +118,7 @@
           class="mt-12 md:flex md:flex-row text-center justify-between flex-col"
         >
           <!-- item 1 -->
-          <div>
+          <div class="trans-hidden feature">
             <img
               class="mx-auto mt-10"
               src="img/section3-sterilization.png"
@@ -127,7 +127,7 @@
             <h3 class="text-xl mt-4">Sterilization</h3>
           </div>
           <!-- item 2 -->
-          <div>
+          <div class="trans-hidden feature">
             <img
               class="mx-auto mt-10"
               src="img/section3-dry-cleaning.png"
@@ -137,12 +137,12 @@
           </div>
           <!-- item 3 -->
 
-          <div>
+          <div class="trans-hidden feature">
             <img class="mx-auto mt-10" src="img/section3-ironing.png" alt="" />
             <h3 class="text-xl mt-4">Ironing</h3>
           </div>
           <!-- item 4 -->
-          <div>
+          <div class="trans-hidden feature">
             <img class="mx-auto mt-10" src="img/section3-delivery.png" alt="" />
             <h3 class="text-xl mt-4">Fast Free Delivery</h3>
           </div>
@@ -220,10 +220,11 @@
             <p class="mb-1">Tripoli, Maarad, Near Al Maarad Pharmacy</p>
             <a href="tel:+9616433520"
               ><i class="fa fa-phone mr-2"></i>06 433 520</a
-            ><br>
+            ><br />
             <a href="https://wa.me/+9613176160"
-            ><i class="fa fa-whatsapp fa-xl mr-2" aria-hidden="true"></i
-          >03 176 160</a>
+              ><i class="fa fa-whatsapp fa-xl mr-2" aria-hidden="true"></i>03
+              176 160</a
+            >
           </div>
         </div>
       </div>
@@ -258,6 +259,21 @@
     <script>
       const burger = document.querySelector('#burger');
       const menu = document.querySelector('#menu');
+
+      // START FADING SUBTLE
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          console.log(entry);
+          if(entry.isIntersecting) {
+            entry.target.classList.add('trans-show');
+          } else {
+            entry.target.classList.remove('trans-show');
+          }
+        });
+      });
+      const hiddenElements = document.querySelectorAll('.trans-hidden');
+      hiddenElements.forEach((el) => observer.observe(el));
+      // END FADING SUBTLE
 
       burger.addEventListener('click', () => {
         if (menu.classList.contains('hidden')) {
