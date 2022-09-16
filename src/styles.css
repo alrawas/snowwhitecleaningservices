@@ -19,7 +19,7 @@
   transform: translateX(0);
 }
 
-.feature:nth-child(2) {
+/* .feature:nth-child(2) {
   transition-delay: 200ms;
 }
 
@@ -29,7 +29,7 @@
 
 .feature:nth-child(4) {
   transition-delay: 600ms;
-}
+} */
 
 @media (prefers-reduced-motion) {
   .trans-hidden {
